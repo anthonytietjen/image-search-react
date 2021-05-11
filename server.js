@@ -11,7 +11,7 @@ app.use(cors());
 
 app.use(express.static("build"));
 
-app.use("/api/", async (req, res) => {
+app.use("/api/*", async (req, res) => {
   const url = `https://pixabay.com/api`;
   const options = {
     params: {
@@ -19,8 +19,13 @@ app.use("/api/", async (req, res) => {
       key: pixabayAPIKey,
     },
   };
-  const response = await axios.get(url, options);
-  res.send(response.data);
+  try {
+    const response = await axios.get(url, options);
+    res.send(response.data);
+  } catch (ex) {
+    console.log(ex.message);
+    res.send({});
+  }
 });
 
 // Catch-all route
