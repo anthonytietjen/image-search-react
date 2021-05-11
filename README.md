@@ -2,7 +2,7 @@
 
 **Technologies**: React, React Context API, Pixabay API
 
-**Demo Site**: https://anthonytietjen-imagesearch.vercel.app
+**Demo Site**: https://anthonytietjen-imagesearch.herokuapp.com
 
 ## Running locally
 
