@@ -1,0 +1,73 @@
+@import "../../_variables";
+
+$colorUnpopulated: #959495;
+$colorPopulated: #222;
+
+.search-form {
+  margin-bottom: 50px;
+
+  .input-keywords {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 2px solid #d7d6d9;
+    background-color: #fcfafd;
+    margin-bottom: 20px;
+    font-style: italic;
+
+    &::placeholder {
+      color: $colorUnpopulated;
+    }
+
+    &.populated {
+      color: $colorPopulated;
+      font-style: normal;
+    }
+  }
+
+  .select-category {
+    display: block;
+    width: 100%;
+    padding: 4px 12px;
+    border-radius: 8px;
+    border: 2px solid #d7d6d9;
+    background-color: #fcfafd;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: $colorUnpopulated;
+    font-style: italic;
+
+    &.populated {
+      color: $colorPopulated;
+      font-style: normal;
+    }
+
+    // On Windows, the <option> elements inherit the style of the <select>
+    // This makes the <option> elements look normal even when the display text
+    // on the <select> is italicized
+    option {
+      font-style: normal;
+      color: $colorPopulated;
+    }
+  }
+
+  .button-search {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #2e00c6;
+    border: 0;
+    color: white;
+    font-size: 1.5em;
+    padding: 15px;
+    cursor: pointer;
+    transition-duration: 0.25s;
+    transition-property: opacity;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

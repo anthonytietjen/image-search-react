@@ -1,0 +1,80 @@
+@import "../../_variables";
+
+.search-result-row {
+  display: grid;
+  margin-bottom: 50px;
+  grid-column-gap: 25px;
+  grid-template-columns: 50% 50%;
+
+  @media screen and (max-width: $phoneWidth) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-image {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      display: block;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    button {
+      border: 0;
+      cursor: pointer;
+      color: #fff;
+      padding: 4px;
+      display: block;
+      transition-duration: 0.25s;
+      transition-property: opacity;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      @media screen and (max-width: $phoneWidth) {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+
+      &.save-result {
+        background-color: #ac2e52;
+        border: 1px solid darken(#ac2e52, 5%);
+      }
+      &.unsave-result {
+        background-color: #e0762a;
+        border: 1px solid darken(#e0762a, 10%);
+      }
+    }
+  }
+
+  .container-metadata {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .container-tags {
+      @media screen and (max-width: $phoneWidth) {
+        margin-bottom: 3px;
+      }
+    }
+
+    .container-stats {
+      span {
+        margin-right: 30px;
+
+        svg {
+          margin-left: 4px;
+        }
+      }
+      @media screen and (max-width: $phoneWidth) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

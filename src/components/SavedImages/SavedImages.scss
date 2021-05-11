@@ -1,0 +1,67 @@
+@import "../../_variables";
+
+.saved-images {
+  width: $savedImagesWidth;
+  border-left: 2px solid #eee;
+  padding-left: 30px;
+  margin-bottom: 15px;
+
+  @media screen and (max-width: $phoneWidth) {
+    width: auto;
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  h2 {
+    font-size: 1.1em;
+    margin-top: 0;
+  }
+
+  .no-saved-images {
+    font-style: italic;
+    color: #555;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      @media screen and (max-width: $phoneWidth) {
+        display: inline;
+        margin-right: 10px;
+      }
+
+      a {
+        display: flex;
+        color: #3d00c0;
+        text-decoration: none;
+        line-height: 30px;
+        justify-content: space-between;
+        align-items: center;
+        transition-duration: 0.25s;
+        transition-property: opacity;
+
+        @media screen and (max-width: $phoneWidth) {
+          display: inline;
+        }
+
+        svg {
+          margin-left: 15px;
+
+          @media screen and (max-width: $phoneWidth) {
+            margin-left: 4px;
+          }
+        }
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

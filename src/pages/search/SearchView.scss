@@ -1,0 +1,22 @@
+@import "../../_variables";
+
+.search-view {
+  max-width: $maxWidth;
+  width: 100%;
+  margin: auto; // center on page
+  display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: $phoneWidth) {
+    flex-direction: column-reverse;
+  }
+
+  .form-and-results-container {
+    padding-right: 30px;
+    flex: 1;
+
+    @media screen and (max-width: $phoneWidth) {
+      padding-right: 0;
+    }
+  }
+}

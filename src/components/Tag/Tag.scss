@@ -1,0 +1,13 @@
+$backgroundColor: #14967c;
+$borderColor: darken($backgroundColor, 2%);
+
+.tag {
+  display: inline-block;
+  color: #fff;
+  background-color: $backgroundColor;
+  border-top: 1px solid $borderColor;
+  border-bottom: 1px solid $borderColor;
+  margin-right: 8px;
+  margin-bottom: 6px;
+  padding: 2px 8px;
+}
